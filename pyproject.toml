@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "bike-rental-backend"
+version = "0.1.0"
+description = ""
+authors = ["Даниил Паутов <danpautoff@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12, <3.13"
+django = "^5.0.6"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+flake8 = "^7.1.0"
+isort = "^5.13.2"
+black = "^24.4.2"
+
+[tool.isort]
+profile = "black"
+skip_glob = ["**/migrations/*.py"]
+src_paths = ["src/backend"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
