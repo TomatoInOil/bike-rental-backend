@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "users.apps.UsersConfig",
     "bikes.apps.BikesConfig",
+    "rental.apps.RentalConfig",
     "drf_spectacular",
 ]
 
