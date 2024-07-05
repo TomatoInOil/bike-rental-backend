@@ -24,6 +24,7 @@ class Bike(models.Model):
     class Meta:
         verbose_name = "Велосипед"
         verbose_name_plural = "Велосипеды"
+        ordering = ("serial_number",)
 
     def __str__(self):
         return self.serial_number

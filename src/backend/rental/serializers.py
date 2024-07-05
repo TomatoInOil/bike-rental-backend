@@ -9,7 +9,6 @@ class RentalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rental
         fields = (
-            "id",
             "user",
             "bike",
             "start_time",

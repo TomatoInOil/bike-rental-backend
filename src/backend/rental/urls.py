@@ -3,6 +3,8 @@ from django.urls import path
 
 from rental.views import RentalCreateAPIView, RentalListAPIView, RentalUpdateAPIView
 
+app_name = "rental"
+
 urlpatterns = [
     path(
         f"{settings.API_V1_PREFIX}/rentals/start/",

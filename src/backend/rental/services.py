@@ -3,6 +3,7 @@ from datetime import datetime
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 from rest_framework.exceptions import ValidationError
+from rest_framework.settings import api_settings
 
 from rental.models import Rental, RentalStatus
 
@@ -37,4 +38,6 @@ def check_no_active_rental(user: User) -> None:
     Вызывает исключение ValidationError, если у пользователя уже есть активная аренда.
     """
     if Rental.objects.filter(user=user, status=RentalStatus.ACTIVE).exists():
-        raise ValidationError("У вас уже есть действующая аренда.")
+        raise ValidationError(
+            {api_settings.NON_FIELD_ERRORS_KEY: "У вас уже есть действующая аренда."}
+        )

@@ -1,4 +1,5 @@
 from rest_framework.exceptions import ValidationError
+from rest_framework.settings import api_settings
 
 from bikes.models import Bike, BikeStatus
 
@@ -18,4 +19,10 @@ def set_bike_rented(bike_obj: Bike) -> None:
 def check_bike_rentability(bike_obj: Bike) -> None:
     """Вызывает исключение ValidationError, если велосипед не доступен для аренды."""
     if bike_obj.status != BikeStatus.AVAILABLE:
-        raise ValidationError("Этот велосипед не доступен для аренды.")
+        raise ValidationError(
+            {
+                api_settings.NON_FIELD_ERRORS_KEY: (
+                    "Этот велосипед не доступен для аренды."
+                )
+            }
+        )
