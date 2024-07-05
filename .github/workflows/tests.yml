@@ -6,7 +6,6 @@ on:
   pull_request:
     branches:
       - master
-  environment: tests
 
 jobs:
   build:
@@ -46,5 +45,6 @@ jobs:
           poetry run pre-commit run --all-files
 
       - name: Run tests with pytest
+        environment: tests
         run: |
           poetry run pytest
