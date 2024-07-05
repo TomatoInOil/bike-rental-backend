@@ -10,7 +10,7 @@ on:
 jobs:
   testing:
     runs-on: ubuntu-latest
-    environment: production
+    environment: tests
 
     steps:
       - name: Checkout code
