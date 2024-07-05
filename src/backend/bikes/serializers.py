@@ -7,6 +7,7 @@ class BikeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bike
         fields = (
+            "id",
             "serial_number",
             "rental_cost_per_hour",
         )

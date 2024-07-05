@@ -1,16 +1,18 @@
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.db.models import Q
 
 from bikes.models import Bike
 
 User = get_user_model()
 
 
-class Rental(models.Model):
-    class Status(models.IntegerChoices):
-        ACTIVE = 1, "Активная поездка"
-        ENDED = 0, "Завершенная поездка"
+class RentalStatus(models.IntegerChoices):
+    ACTIVE = 1, "Действующая аренда"
+    ENDED = 0, "Завершенная аренда"
 
+
+class Rental(models.Model):
     user = models.ForeignKey(
         verbose_name="Арендатор",
         to=User,
@@ -37,16 +39,25 @@ class Rental(models.Model):
         verbose_name="Итоговая стоимость",
         null=True,
         blank=True,
+        help_text="Итоговая стоимость аренды, выраженная в рублях.",
     )
     status = models.IntegerField(
-        verbose_name="Статус поездки",
-        choices=Status.choices,
-        default=Status.ACTIVE,
+        verbose_name="Статус",
+        choices=RentalStatus.choices,
+        default=RentalStatus.ACTIVE,
     )
 
     class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user"],
+                condition=Q(status=RentalStatus.ACTIVE),
+                name="unique_active_rental_for_user",
+            ),
+        ]
         verbose_name = "Аренда"
         verbose_name_plural = "Аренды"
+        ordering = ("-start_time",)
 
     def __str__(self):
         return f"Аренда {self.bike} пользователем {self.user}"

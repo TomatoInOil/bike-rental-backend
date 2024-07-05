@@ -8,6 +8,8 @@ User = get_user_model()
 
 
 class UserCreateAPIView(generics.CreateAPIView):
+    """Зарегистрироваться."""
+
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = (AllowAny,)

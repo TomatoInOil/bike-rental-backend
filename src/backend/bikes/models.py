@@ -1,19 +1,20 @@
 from django.db import models
 
 
-class Bike(models.Model):
-    class Status(models.IntegerChoices):
-        AVAILABLE = 1, "Доступен"
-        RENTED = 2, "Арендован"
-        MAINTENANCE = 3, "На обслуживании"
-        LOST = 4, "Утерян"
-        SOLD = 5, "Продан"
+class BikeStatus(models.IntegerChoices):
+    AVAILABLE = 1, "Доступен"
+    RENTED = 2, "Арендован"
+    MAINTENANCE = 3, "На обслуживании"
+    LOST = 4, "Утерян"
+    SOLD = 5, "Продан"
 
+
+class Bike(models.Model):
     serial_number = models.CharField(
         verbose_name="Серийный номер", max_length=50, unique=True
     )
     status = models.IntegerField(
-        verbose_name="Статус", choices=Status.choices, default=Status.AVAILABLE
+        verbose_name="Статус", choices=BikeStatus.choices, default=BikeStatus.AVAILABLE
     )
     rental_cost_per_hour = models.FloatField(
         verbose_name="Стоимость аренды",
