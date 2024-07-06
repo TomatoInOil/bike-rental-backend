@@ -20,6 +20,6 @@ services:
       - backend
 
 volumes:
-  static:
-  media:
-  db_data:
+  static_value:
+  media_value:
+  data_value:
