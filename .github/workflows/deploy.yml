@@ -13,7 +13,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: bike-rental-backend
   DEPLOY_PATH: ~/bike-rental-backend
-  REP_OWNER: TomatoInOil
+  REP_OWNER: tomatoinoil
 
 defaults:
   run:
