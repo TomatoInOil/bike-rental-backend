@@ -1,0 +1,25 @@
+services:
+  db:
+    extends:
+      file: docker-compose.yml
+      service: db
+
+  backend:
+    image: ghcr.io/tomatoinoil/bike-rental-backend:latest
+    extends:
+      file: docker-compose.yml
+      service: backend
+    depends_on:
+      - db
+
+  nginx:
+    extends:
+      file: docker-compose.yml
+      service: nginx
+    depends_on:
+      - backend
+
+volumes:
+  static:
+  media:
+  db_data:
