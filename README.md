@@ -1,6 +1,6 @@
 # Проект "Сервис аренды велосипедов"
 
-Этот проект реализует _backend_ для сервиса аренды велосипедов, предоставляя _RESTful API_ для основных операций.
+Этот проект реализует _backend_ для сервиса аренды велосипедов.
 
 ## Функциональные цели
 
@@ -90,6 +90,8 @@
 **Требования:**
 * Docker ([документация](https://docs.docker.com/desktop/))
 
+**Шаги:**
+
 1. Запустите контейнеры:
    ```shell
    docker compose --file infra/docker-compose.yml up -d
@@ -121,7 +123,7 @@ pytest
 
 ## Примеры запросов
 ### Регистрация нового пользователя
-#### Запрос:
+**Запрос:**
 ```http request
 POST /api/v1/users/registration/
 Content-Type: application/json
@@ -132,7 +134,7 @@ Content-Type: application/json
   "password": "strongpassword"
 }
 ```
-#### Ответ (успешно):
+**Ответ (успешно):**
 ```json
 {
   "username": "example_user",
@@ -141,7 +143,7 @@ Content-Type: application/json
 ```
 
 ### Получение _access_ токена
-#### Запрос:
+**Запрос:**
 ```http request
 POST /api/v1/token/
 Content-Type: application/json
@@ -151,7 +153,7 @@ Content-Type: application/json
   "password": "strongpassword"
 }
 ```
-#### Ответ (успешно):
+**Ответ (успешно):**
 ```json
 {
   "refresh": "string",
@@ -161,12 +163,12 @@ Content-Type: application/json
 
 
 ### Получение списка доступных велосипедов
-#### Запрос:
+**Запрос:**
 ```http request
 GET /api/v1/bikes/
 Authorization: Bearer your_access_token
 ```
-#### Ответ (успешно):
+**Ответ (успешно):**
 ```json
 {
   "count": 2,
@@ -188,7 +190,7 @@ Authorization: Bearer your_access_token
 ```
 
 ### Аренда велосипеда
-#### Запрос:
+**Запрос:**
 ```http request
 POST /api/v1/rentals/start/
 Authorization: Bearer your_access_token
@@ -198,7 +200,7 @@ Content-Type: application/json
   "bike": 21
 }
 ```
-#### Ответ (успешно):
+**Ответ (успешно):**
 ```json
 {
   "user": 3,
@@ -211,7 +213,7 @@ Content-Type: application/json
 ```
 
 ### Завершение аренды
-#### Запрос:
+**Запрос:**
 ```http request
 PATCH /api/v1/rentals/end/
 Authorization: Bearer your_access_token
@@ -219,7 +221,7 @@ Content-Type: application/json
 
 {}
 ```
-#### Ответ (успешно):
+**Ответ (успешно):**
 ```json
 {
   "user": 3,
@@ -232,12 +234,12 @@ Content-Type: application/json
 ```
 
 ### Получение истории аренд пользователя
-#### Запрос:
+**Запрос:**
 ```http request
 GET /api/v1/rentals/
 Authorization: Bearer your_access_token
 ```
-#### Ответ (успешно):
+**Ответ (успешно):**
 ```json
 {
   "count": 2,
