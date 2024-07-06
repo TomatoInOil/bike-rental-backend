@@ -23,29 +23,30 @@ jobs:
   build_and_push:
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: GitHub Packages login
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-          USERNAME: ${{ github.actor}}
-          GITHUB: ${{ env.REGISTRY }}
-        run: echo "$GITHUB_TOKEN" | docker login "$GITHUB" -u "$USERNAME" --password-stdin
-
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push backend
         uses: docker/build-push-action@v6
-        permissions:
-          contents: read
-          packages: write
         with:
           context: .
-          file: ./Dockerfile
           push: true
-          tags: |
-            ${{ env.REGISTRY }}/${{ env.REP_OWNER }}/${{ env.IMAGE_NAME }}:latest
+          tags: ${{ env.REGISTRY }}/${{ env.REP_OWNER }}/${{ env.IMAGE_NAME }}:latest
+
 
   deploy:
     name: Deploy
@@ -88,6 +89,7 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+
 
   start_application:
     name: Start application
