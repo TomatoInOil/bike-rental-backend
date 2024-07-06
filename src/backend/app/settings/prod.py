@@ -1,8 +1,6 @@
 from .base import *  # noqa
 
-ALLOWED_HOSTS = [
-    "backend",
-]
+ALLOWED_HOSTS = ["backend"]
 CSRF_TRUSTED_ORIGINS = ("http://89.223.123.154", "https://89.223.123.154")
 
 DATABASES = {

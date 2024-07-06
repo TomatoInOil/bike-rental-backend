@@ -1,0 +1,559 @@
+[
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$m7x6dk98fcghBPND6fxwGt$BY8wHl5MKJgez9pvkuRgDcIVOZx/qDfrVdRQzXfYu8s=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user123",
+    "first_name": "",
+    "last_name": "",
+    "email": "user123@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:35:52.020Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$hx4Q1tnnipovPEPjLn20qi$5J1je68UzK8xk2b/t/2wbatde0nJK8phMYePcOw6CSE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "john_doe",
+    "first_name": "",
+    "last_name": "",
+    "email": "john.doe@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:01.876Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$4QT0NnYcsyVJswb1RbpZXr$iu6J4r/rysX3ToiyHdnL63pEt/WT7DNplBauUygxQdo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alice_smith",
+    "first_name": "",
+    "last_name": "",
+    "email": "alice.smith@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:05.868Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$RiwWI8jWpsUAVGrSCFe8vy$rjts4cCSBJ3Gh0vSNY6O5VYfgYbyLEHTtlDXhtj8ERE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "max_power",
+    "first_name": "",
+    "last_name": "",
+    "email": "max.power@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:09.977Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$29Z7kXbXStMpPwEDfVi4aj$jPInNXNYCAaj+vnyidceV5aI6JG0SpnetV9YpcTZD2w=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "laura_brown",
+    "first_name": "",
+    "last_name": "",
+    "email": "laura.brown@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:14.039Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$AvCLbXgAcPKTQRDJzOyQXQ$6zsqoKncTlufodLyb4kYzNxBXulEvJCMIOh9buEEXOk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mike_jones",
+    "first_name": "",
+    "last_name": "",
+    "email": "mike.jones@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:18.195Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$NltmWMG7QDavNjPZz3hmyQ$7eI9DAeglMqpj1wCATp0DWjGF20tzTBYTOccX20l42c=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sarah_adams",
+    "first_name": "",
+    "last_name": "",
+    "email": "sarah.adams@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:23.560Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$WtJ9ilFBN8YeXP6jwYuLTn$mGNNyCz/VTf6JztFXG7NIY8s/E4iCCv0SRrSg6J/aXM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alex_wilson",
+    "first_name": "",
+    "last_name": "",
+    "email": "alex.wilson@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:27.651Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$XE0axyFEGVbfFWLgS1uLho$ZXx/8DeeMP/rVUiCpfrr3Cu1iDC21FhXoGNj2rTIkuw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "emma_garcia",
+    "first_name": "",
+    "last_name": "",
+    "email": "emma.garcia@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:31.927Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$0UxfQjwktJm29iMv2sbJD1$AjFRomKiU16FbvcTK4IUWTNWlxy79+c/zLvQCZfBmGU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kevin_clark",
+    "first_name": "",
+    "last_name": "",
+    "email": "kevin.clark@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-06T14:36:35.751Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s4901j34cgmsedm0mp0u58eumaza9mi5",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBSJgO4dO8ZyDCAVA0kpV0Z764kXeju57-X9xKe9q34vafVL1GchRKn3y8QP1IdIN6p3prkVrd1CXIo8qBdXltMz8vh_gUK9TKy6KJLOjMEhIn4u6wiwjRnIKs0gsMpGwUqm-SInDWKIs7AwWTWTrw_6yo4Dg:1sQ6QS:cM_ov0ICkH2jw82mGFvUyOL7K4UmYbrs2TE7_jRDmjQ",
+    "expire_date": "2024-07-20T14:30:08.031Z"
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 1,
+  "fields": {
+    "serial_number": "BVX123",
+    "status": 1,
+    "rental_cost_per_hour": 150.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 2,
+  "fields": {
+    "serial_number": "ZQA456",
+    "status": 2,
+    "rental_cost_per_hour": 120.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 3,
+  "fields": {
+    "serial_number": "PLW789",
+    "status": 3,
+    "rental_cost_per_hour": 90.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 4,
+  "fields": {
+    "serial_number": "RTY234",
+    "status": 4,
+    "rental_cost_per_hour": 200.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 5,
+  "fields": {
+    "serial_number": "KLO567",
+    "status": 5,
+    "rental_cost_per_hour": 180.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 6,
+  "fields": {
+    "serial_number": "POI890",
+    "status": 1,
+    "rental_cost_per_hour": 140.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 7,
+  "fields": {
+    "serial_number": "MNB123",
+    "status": 2,
+    "rental_cost_per_hour": 110.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 8,
+  "fields": {
+    "serial_number": "QWE456",
+    "status": 3,
+    "rental_cost_per_hour": 80.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 9,
+  "fields": {
+    "serial_number": "ASD789",
+    "status": 1,
+    "rental_cost_per_hour": 190.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 10,
+  "fields": {
+    "serial_number": "ZXC234",
+    "status": 5,
+    "rental_cost_per_hour": 170.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 11,
+  "fields": {
+    "serial_number": "QAZ567",
+    "status": 1,
+    "rental_cost_per_hour": 130.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 12,
+  "fields": {
+    "serial_number": "WSX890",
+    "status": 2,
+    "rental_cost_per_hour": 100.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 13,
+  "fields": {
+    "serial_number": "EDC123",
+    "status": 3,
+    "rental_cost_per_hour": 70.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 14,
+  "fields": {
+    "serial_number": "RFV456",
+    "status": 4,
+    "rental_cost_per_hour": 210.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 15,
+  "fields": {
+    "serial_number": "TGB789",
+    "status": 5,
+    "rental_cost_per_hour": 160.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 16,
+  "fields": {
+    "serial_number": "YHN234",
+    "status": 1,
+    "rental_cost_per_hour": 120.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 17,
+  "fields": {
+    "serial_number": "UJM567",
+    "status": 2,
+    "rental_cost_per_hour": 90.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 18,
+  "fields": {
+    "serial_number": "IKL890",
+    "status": 3,
+    "rental_cost_per_hour": 60.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 19,
+  "fields": {
+    "serial_number": "OPQ123",
+    "status": 4,
+    "rental_cost_per_hour": 220.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 20,
+  "fields": {
+    "serial_number": "PLK456",
+    "status": 5,
+    "rental_cost_per_hour": 150.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 21,
+  "fields": {
+    "serial_number": "OKM789",
+    "status": 1,
+    "rental_cost_per_hour": 110.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 22,
+  "fields": {
+    "serial_number": "IJN234",
+    "status": 2,
+    "rental_cost_per_hour": 80.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 23,
+  "fields": {
+    "serial_number": "UHB567",
+    "status": 3,
+    "rental_cost_per_hour": 50.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 24,
+  "fields": {
+    "serial_number": "YGV890",
+    "status": 4,
+    "rental_cost_per_hour": 230.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 25,
+  "fields": {
+    "serial_number": "TFC123",
+    "status": 5,
+    "rental_cost_per_hour": 140.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 26,
+  "fields": {
+    "serial_number": "RDX456",
+    "status": 1,
+    "rental_cost_per_hour": 100.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 27,
+  "fields": {
+    "serial_number": "XSE789",
+    "status": 2,
+    "rental_cost_per_hour": 70.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 28,
+  "fields": {
+    "serial_number": "CVB234",
+    "status": 3,
+    "rental_cost_per_hour": 40.0
+  }
+},
+{
+  "model": "bikes.bike",
+  "pk": 29,
+  "fields": {
+    "serial_number": "BNM567",
+    "status": 4,
+    "rental_cost_per_hour": 240.0
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 1,
+  "fields": {
+    "user": 7,
+    "bike": 22,
+    "start_time": "2024-07-06T14:37:39.382Z",
+    "end_time": null,
+    "total_cost": null,
+    "status": 1
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 2,
+  "fields": {
+    "user": 6,
+    "bike": 1,
+    "start_time": "2024-07-06T14:38:34.644Z",
+    "end_time": "2024-07-06T14:38:40.531Z",
+    "total_cost": 0.25,
+    "status": 0
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "bike": 7,
+    "start_time": "2024-07-06T14:40:12.590Z",
+    "end_time": null,
+    "total_cost": null,
+    "status": 1
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 4,
+  "fields": {
+    "user": 8,
+    "bike": 17,
+    "start_time": "2024-07-06T14:40:23.973Z",
+    "end_time": null,
+    "total_cost": null,
+    "status": 1
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 5,
+  "fields": {
+    "user": 11,
+    "bike": 12,
+    "start_time": "2024-07-06T14:40:40.347Z",
+    "end_time": null,
+    "total_cost": null,
+    "status": 1
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 6,
+  "fields": {
+    "user": 10,
+    "bike": 27,
+    "start_time": "2024-07-06T14:40:56.440Z",
+    "end_time": null,
+    "total_cost": null,
+    "status": 1
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 7,
+  "fields": {
+    "user": 9,
+    "bike": 2,
+    "start_time": "2024-07-06T14:41:08.449Z",
+    "end_time": null,
+    "total_cost": null,
+    "status": 1
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 8,
+  "fields": {
+    "user": 3,
+    "bike": 11,
+    "start_time": "2024-07-06T14:43:33.597Z",
+    "end_time": "2024-07-06T14:43:37.768Z",
+    "total_cost": 0.15,
+    "status": 0
+  }
+},
+{
+  "model": "rental.rental",
+  "pk": 9,
+  "fields": {
+    "user": 3,
+    "bike": 26,
+    "start_time": "2024-07-06T14:43:47.316Z",
+    "end_time": "2024-07-06T14:43:55.012Z",
+    "total_cost": 0.21,
+    "status": 0
+  }
+}
+]
