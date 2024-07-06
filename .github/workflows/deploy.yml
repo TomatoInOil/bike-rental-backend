@@ -115,4 +115,4 @@ jobs:
 
             docker compose --file infra/docker-compose.yml rm backend -f
 
-            docker compose --env-file .env --file infra/docker-compose.yml up -d
+            docker compose --env-file .env --file infra/docker-compose.yml up -d --no-build
