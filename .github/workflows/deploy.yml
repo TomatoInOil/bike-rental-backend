@@ -37,6 +37,9 @@ jobs:
 
       - name: Build and push backend
         uses: docker/build-push-action@v6
+        permissions:
+          contents: read
+          packages: write
         with:
           context: .
           file: ./Dockerfile
@@ -106,8 +109,8 @@ jobs:
 
             docker pull ${{ env.REGISTRY }}/${{ env.REP_OWNER }}/${{ env.IMAGE_NAME }}:latest
 
-            docker compose --file infra/docker-compose.stage.yml stop nginx backend db
+            docker compose --file infra/docker-compose.yml stop nginx backend db
 
-            docker compose --file infra/docker-compose.stage.yml rm backend -f
+            docker compose --file infra/docker-compose.yml rm backend -f
 
             docker compose --env-file .env --file infra/docker-compose.yml up -d
